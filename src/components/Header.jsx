@@ -9,7 +9,7 @@ const Header = (props) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container-fluid">
-                <a className="navbar-brand" >{props.title}</a>
+                <Link to={'/'} className="navbar-brand" >{props.title}</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
                     aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@ const Header = (props) => {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to={'/registration'} className="nav-link active">Registration</Link>
+                                    <Link to={'/register'} className="nav-link active">Register</Link>
                                 </li>
                             </>
                         ) : (

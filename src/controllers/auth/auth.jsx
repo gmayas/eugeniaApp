@@ -4,9 +4,9 @@ let UrlApi = "http://localhost:4000/api/auth";
 //
 export const signIn = async (dataIn) => {
     try {
-        console.log('dataIn: ', dataIn); 
         const data = {email_user: dataIn.emailUser, password_user: dataIn.passwordUser }
-        let response = await Axios.post(`${UrlApi}/signInt`, data);
+        console.log('data: ', data); 
+        let response = await Axios.post(`${UrlApi}/signIn`, data);
         //let dataReturn = await response.json()
         return response;
     } catch (e) {
