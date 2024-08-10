@@ -11,7 +11,7 @@ export const alertMsg =  (message, title, type) => {
             "positionClass": "toast-bottom-right",
             "preventDuplicates": false,
             "onclick": null,
-            "showDuration": "300",
+            "showDuration": "500",
             "hideDuration": "1000",
             "timeOut": "5000",
             "extendedTimeOut": "1000",
