@@ -1,6 +1,6 @@
 import Axios from 'axios';
 //
-let UrlApi = "http://localhost:4000/api/invitations";
+const UrlApi = "http://localhost:4000/api/invitations";
 //
 export const getInvUserId = async (id_user) => {
     try {

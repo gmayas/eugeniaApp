@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-//import { useHistory } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //
 import { isLoggedIn } from './controllers/auth/auth'
@@ -16,7 +15,6 @@ import './App.css'
 //
 const App = () => {
   //
-  //let history = useHistory();
   const [authState, setAuthState] = useState({
     id_user: 0,
     name_user: "",
@@ -54,19 +52,6 @@ const App = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  //
-  const logout = () => {
-    localStorage.removeItem("token");
-    setAuthState({
-      id_user: 0,
-      name_user: "",
-      last_name_user: "",
-      email_user: "",
-      apartment_num_user: "",
-      success: false
-    });
-    //history.push("/login");
-  };
   //
   return (
     <AuthContext.Provider value={{ authState, setAuthState }}>
