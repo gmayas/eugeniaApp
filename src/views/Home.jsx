@@ -35,7 +35,7 @@ const Home = () => {
     }, []);
     //
     return (
-        <div className="container-fluid">
+        <div className="container">
             <div className="container text-white my-2">
                 <h1 className="text-center mb-1">User invitations: {name_user}</h1>
             </div>
@@ -61,15 +61,14 @@ const Home = () => {
                                                             viewBox={`0 0 256 256`}
                                                         />
                                                     </div>
+                                                    <h5>{padLeft(value.id_inv, 6)}</h5>
                                                 </div>
                                                 <div className="col-sm-3 text-left">
-                                                    <h5>Invitation:</h5>
                                                     <h5>Creation:</h5>
                                                     <h5>Entry:</h5>
                                                     <h5>Expiration:</h5>
                                                 </div>
                                                 <div className="col-sm-6 text-left">
-                                                    <h5>{padLeft(value.id_inv, 10)}</h5>
                                                     <h5>{moment(value.creation_date_inv).format('dd-DD-MMM-YYYY, h:mm:ss a')}</h5>
                                                     <h5>{moment(value.entry_date_time_inv).format('dd-DD-MMM-YYYY, h:mm:ss a')}</h5>
                                                     <h5>{moment(value.expiration_date_inv).format('dd-DD-MMM-YYYY, h:mm:ss a')}</h5>
