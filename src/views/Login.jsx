@@ -42,14 +42,14 @@ const Login = () => {
       <div className="card border-primary" style={{ width: "250px" }}>
         <h4 className="card-header">Login</h4>
         <div className="card-body">
-            <div class="mb-3">
+            <div className="mb-3">
               <label>Email User: </label>
-              <input type="email" class="form-control border border-success" laceholder="Enter email" 
+              <input type="email" className="form-control border border-success" laceholder="Enter email" 
                 onChange={(event) => { setEmailUser(event.target.value) }} />
             </div>
-            <div class="mb-3">
+            <div className="mb-3">
               <label>Password: </label>
-              <input type="password" class="form-control border border-success" placeholder="Password" autocomplete="off" 
+              <input type="password" className="form-control border border-success" placeholder="Password" autocomplete="off" 
                 onChange={(event) => { setPasswordUser(event.target.value) }} />
             </div>
             <div className="d-md-flex justify-content-md-end">
