@@ -20,7 +20,7 @@ export const alertMsg =  (message, title, type) => {
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
           }
-          toastr.clear()
+          //toastr.clear()
           switch (type) {
             case "success":
                 toastr.success(message, title)

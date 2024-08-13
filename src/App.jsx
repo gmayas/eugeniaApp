@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import { alertMsg } from "./components/alertMsg";
 import './App.css'
 //
-const App = () => {
+const App = ({ children }) => {
   //
   const [authState, setAuthState] = useState({
     id_user: 0,
