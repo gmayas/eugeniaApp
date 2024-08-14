@@ -1,11 +1,40 @@
 import Axios from 'axios';
 //
-let UrlApi = "http://localhost:4000/api/invitations";
+const UrlApi = "http://localhost:4000/api/invitations";
 //
-export const getInvUserId = async (id_user) => {
+export const getInvUserId = async (data) => {
     try {
-        let response = await Axios.get(`${UrlApi}/getInvUserId/${id_user}`, { headers: { token: localStorage.getItem("token") } });
-        //let dataReturn = await response.json()
+        console.log('data Post:', data)
+        if (data.id_inv === '') { data.id_inv = null; };
+        let response = await Axios.post(`${UrlApi}/getInvUserId`, data, { headers: { token: localStorage.getItem("token") } });
+        return response;
+    } catch (e) {
+        console.log(e);
+        return {
+            message: 'Error in API',
+            error: e
+        };
+    };
+};
+
+export const deleteInvId = async (id_inv) => {
+    try {
+        console.log('id_inv delete:', id_inv)
+        let response = await Axios.delete(`${UrlApi}/removeInvId/${id_inv}`, { headers: { token: localStorage.getItem("token") } });
+        return response;
+    } catch (e) {
+        console.log(e);
+        return {
+            message: 'Error in API',
+            error: e
+        };
+    };
+};
+
+export const createInvUser = async (data) => {
+    try {
+        console.log('data Post Create:', data)
+        let response = await Axios.post(`${UrlApi}/createInvUser`, data, { headers: { token: localStorage.getItem("token") } });
         return response;
     } catch (e) {
         console.log(e);
