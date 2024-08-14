@@ -10,7 +10,7 @@ FrontEnd en JavaScript con React Ver. 18 - Vite, BackEnd en TypeScript con NodeJ
 Funcionalidad:
 
 🙂 Login, si ya es un usuario registrado, solo escriba su email y password.
-![](/images/01.png)
+![](/images/01-L.png)
 🙂 Si no es así, de click en register.
 ![](/images/02.png)
 🙂 Como puede ver cada campo es obligatorio y muestra sus notificaciones según lo que requiera.
